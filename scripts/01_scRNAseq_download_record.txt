@@ -1,0 +1,60 @@
+#####Downloading scRNAseq data
+
+#Below is 'template' code on how to download the data to scratch and then transfer to RDM
+
+cd /QRISdata/Q5935
+mkdir -p /scratch/user/s4436039/scdata/GSE123139
+cd /scratch/user/s4436039/scdata/GSE123139
+
+wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123139/suppl/GSE123139_RAW.tar 
+
+mkdir -p /QRISdata/Q5935/nikita/scdata/GSE123139
+
+rsync -azvhP GSE123139_RAW.tar /QRISdata/Q5935/nikita/scdata/GSE123139
+
+
+#Download: if the file is ftp on geo can right click, copy link address, and 
+#use that link directly. If it is html make my own link using the one above a a template
+
+#Vazquez-Garcia et al DOI: 10.1038/s41586-022-05496-1, Ovarian cancer, GEO: GSE180661
+#the link below is from right clicking on the ftp link in the GEO page
+
+cd /QRISdata/Q5935
+
+mkdir -p /scratch/user/s4436039/scdata/GSE180661
+cd /scratch/user/s4436039/scdata/GSE180661
+
+wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE180nnn/GSE180661/suppl/GSE180661%5FGEO%5Fcells.tsv.gz
+wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE180nnn/GSE180661/suppl/GSE180661%5Fmatrix.h5
+
+mkdir -p /QRISdata/Q5935/nikita/scdata/GSE180661
+
+rsync -azvhP GSE180661_GEO_cells.tsv.gz /QRISdata/Q5935/nikita/scdata/GSE180661
+rsync -azvhP GSE180661_matrix.h5 /QRISdata/Q5935/nikita/scdata/GSE180661
+
+#He et al Melanoma GSE219197 (files look weird, need to investigate)
+
+cd /scratch/user/s4436039/scdata
+mkdir -p /scratch/user/s4436039/scdata/GSE219197
+cd /scratch/user/s4436039/scdata/GSE219197
+wget https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE219197&format=file
+mkdir -p /QRISdata/Q5935/nikita/scdata/GSE219197
+rsync -azvhP GSE219197_RAW.tar /QRISdata/Q5935/nikita/scdata/GSE219197
+#resulting file name was weird, trying custom link: 
+wget https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE219197
+rsync -azvhP acc.cgi?acc=GSE219197 /QRISdata/Q5935/nikita/scdata/GSE219197
+#file name still looks odd
+#Fixed this, Kelvin showed me how to make my own link, refer to excel for all links 
+
+#Li et al Melanoma GSE123139 (files look weird, need to investigate)
+
+cd /scratch/user/s4436039/scdata
+mkdir -p /scratch/user/s4436039/scdata/GSE123139
+cd /scratch/user/s4436039/scdata/GSE123139
+wget https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE123139&format=file
+wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123139/suppl/GSE123139%5FT%5Fcells%5Ftcrb%5Fv2.txt.gz 
+
+mkdir -p /QRISdata/Q5935/nikita/scdata/GSE123139
+rsync -azvhP index.html?acc=GSE123139 /QRISdata/Q5935/nikita/scdata/GSE123139
+rsync -azvhP GSE123139_T_cells_tcrb_v2.txt.gz /QRISdata/Q5935/nikita/scdata/GSE123139
+#Fixed this, Kelvin showed me how to make my own link, refer to excel for all links 
