@@ -1,13 +1,9 @@
-#script to merge myeloid cells from all datasets
+#!/usr/bin/env Rscript
 
-#set wd
-getwd()
 setwd('/scratch/user/s4436039/scdata')
-getwd()
 
 library(Seurat)
 
-# import all datasets
 data_1 <- readRDS(file = "/scratch/user/s4436039/scdata/Myeloid_Cells/Myeloid_Cells_Integrate/GSE112271_myeloid_int.RDS")
 data_2 <- readRDS(file = "/scratch/user/s4436039/scdata/Myeloid_Cells/Myeloid_Cells_Integrate/GSE131907_myeloid_int.RDS")
 data_3 <- readRDS(file = "/scratch/user/s4436039/scdata/Myeloid_Cells/Myeloid_Cells_Integrate/GSE139324_myeloid_int.RDS")
@@ -44,8 +40,6 @@ data_33 <- readRDS(file = "/scratch/user/s4436039/scdata/Myeloid_Cells/Myeloid_C
 data_34 <- readRDS(file = "/scratch/user/s4436039/scdata/Myeloid_Cells/Myeloid_Cells_Integrate/PRJCA005422_myeloid_int.RDS")
 data_35 <- readRDS(file = "/scratch/user/s4436039/scdata/Myeloid_Cells/Myeloid_Cells_Integrate/PRJNA907381_myeloid_int.RDS")
 
-#merge all datasets
 Data <- merge(data_1, y = c(data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9, data_10, data_11, data_12, data_13, data_14, data_15, data_16, data_17, data_18, data_19, data_20, data_21, data_22, data_23, data_24, data_25, data_26, data_27, data_28, data_29, data_30, data_31, data_32, data_33, data_34, data_35), project = "integration")
 
-#Export integrated RDS 
 saveRDS(Data, "/scratch/user/s4436039/scdata/All_Myeloid.RDS")
