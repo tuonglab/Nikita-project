@@ -1,0 +1,6 @@
+2024-11-08 13:43:33,457 - harmonypy - INFO - Computing initial centroids with sklearn.KMeans...
+2024-11-08 13:44:03,287 - harmonypy - INFO - sklearn.KMeans initialization complete.
+2024-11-08 13:44:06,722 - harmonypy - INFO - Iteration 1 of 200
+2024-11-08 14:00:03,783 - harmonypy - INFO - Iteration 2 of 200
+2024-11-08 14:14:15,844 - harmonypy - INFO - Iteration 3 of 200
+2024-11-08 14:28:26,079 - harmonypy - INFO - Converged after 3 iterations

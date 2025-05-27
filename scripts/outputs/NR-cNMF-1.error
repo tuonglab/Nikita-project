@@ -1,0 +1,20 @@
+/home/s4436039/miniforge3/envs/env/lib/python3.12/site-packages/scanpy/preprocessing/_scale.py:316: UserWarning: Received a view of an AnnData. Making a copy.
+  view_to_actual(adata)
+/home/s4436039/miniforge3/envs/env/lib/python3.12/site-packages/scanpy/preprocessing/_scale.py:316: UserWarning: Received a view of an AnnData. Making a copy.
+  view_to_actual(adata)
+/home/s4436039/miniforge3/envs/env/lib/python3.12/site-packages/scanpy/preprocessing/_pca.py:385: FutureWarning: Argument `use_highly_variable` is deprecated, consider using the mask argument. Use_highly_variable=True can be called through mask_var="highly_variable". Use_highly_variable=False can be called through mask_var=None
+  warn(msg, FutureWarning)
+2025-04-29 17:44:20,484 - harmonypy - INFO - Computing initial centroids with sklearn.KMeans...
+2025-04-29 17:50:18,339 - harmonypy - INFO - sklearn.KMeans initialization complete.
+2025-04-29 17:50:20,054 - harmonypy - INFO - Iteration 1 of 20
+2025-04-29 18:15:01,806 - harmonypy - INFO - Iteration 2 of 20
+2025-04-29 18:40:37,110 - harmonypy - INFO - Iteration 3 of 20
+2025-04-29 19:03:47,579 - harmonypy - INFO - Iteration 4 of 20
+2025-04-29 19:27:51,347 - harmonypy - INFO - Iteration 5 of 20
+2025-04-29 19:44:44,267 - harmonypy - INFO - Iteration 6 of 20
+2025-04-29 20:05:54,453 - harmonypy - INFO - Iteration 7 of 20
+2025-04-29 20:32:01,729 - harmonypy - INFO - Converged after 7 iterations
+WARNING: Your filename has more than two extensions: ['.Corrected', '.HVG', '.Varnorm', '.h5ad'].
+Only considering the two last: ['.Varnorm', '.h5ad'].
+WARNING: Your filename has more than two extensions: ['.Corrected', '.HVG', '.Varnorm', '.h5ad'].
+Only considering the two last: ['.Varnorm', '.h5ad'].
