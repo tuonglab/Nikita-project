@@ -1,7 +1,7 @@
 # Nikita PhD Project
 
-This repository contains work for aim 1 of my PhD: developing a single-cell atlas of myeloid cells in human cancer, and other associated analyses (TCGA, etc). 
-
+This repository contains notebooks for all work for my PhD: developing a single-cell atlas of myeloid cells in human cancer, and other associated analyses. 
+See README file inside the notebooks folder for more detailed breakdown
 
 ## Folder structure
 
@@ -11,7 +11,6 @@ repo_name/
 ├── figures/ # any file changes are ignored by github
 ├── notebooks/
 ├── scripts/
-├── slides/
 ├── write/ # any file changes are ignored by github
 ```
 
